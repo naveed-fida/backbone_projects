@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Backbone Collections practice</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="javascripts/underscore.js"></script>
+  <script src="javascripts/backbone.js"></script>
+  <script src="javascripts/handlebars.js"></script>
+</head>
+<body>
+  
+  <script id="users" type="text/template">
+    {{#each users}}
+    <article id="user_{{id}}">
+      <h1><a href="http://{{website}}">{{name}}</a></h1>
+      <h2><a href="mailto:{{email}}">{{email}}</a></h2>
+      <dl>
+        <dt>User name</dt>
+        <dd>{{username}}</dd>
+        <dt>Company</dt>
+        <dd>{{company.name}}</dd>
+      </dl>
+    </article>
+    {{/each}}
+  </script>
+
+  <script>
+    var users_data = [{
+      id: 1,
+      name: "Leanne Graham"
+    }, {
+      id: 2,
+      name: "Ervin Howell"
+    }, {
+      id: 3,
+      name: "Clementine Bauch"
+    }];
+  </script>
+  <script src="javascripts/collections.js"></script>
+</body>
+</html>
